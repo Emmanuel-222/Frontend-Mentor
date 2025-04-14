@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <a href="#" class="logo">Tech<span>Mentor</span></a>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Frontend Technical Education & Mentorship</h1>
+        <p>
+          Helping developers master frontend skills through expert guidance and
+          personalized learning experiences.
+        </p>
+        <a href="#contact" class="hero-cta">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+      <div class="container">
+        <h2 class="section-title">My Work</h2>
+        <div class="work-grid">
+          <!-- Work Item 1 -->
+          <div class="work-card">
+            <div class="work-image">
+              <img src="./assests/react.png" alt="Workshop image" />
+            </div>
+            <div class="work-content">
+              <h3 class="work-title">Advanced React Patterns Workshop</h3>
+              <p class="work-description">
+                A comprehensive workshop teaching advanced React patterns to
+                intermediate developers.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">React</span>
+                <span class="work-tag">Workshop</span>
+                <span class="work-tag">Advanced</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work Item 2 -->
+          <div class="work-card">
+            <div class="work-image">
+              <img src="./assests/CSS-removebg-preview.png" alt="Course image" />
+            </div>
+            <div class="work-content">
+              <h3 class="work-title">CSS Architecture for Scale</h3>
+              <p class="work-description">
+                Course on building maintainable CSS architecture for enterprise
+                applications.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">CSS</span>
+                <span class="work-tag">Architecture</span>
+                <span class="work-tag">Enterprise</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work Item 3 -->
+          <div class="work-card">
+            <div class="work-image">
+              <img src="./assests/Student_Give_Guidance-removebg-preview.png" alt="Mentoring image" />
+            </div>
+            <div class="work-content">
+              <h3 class="work-title">Frontend Career Mentorship Program</h3>
+              <p class="work-description">
+                Guided mentorship to help junior developers advance their
+                frontend careers.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">Mentorship</span>
+                <span class="work-tag">Career</span>
+                <span class="work-tag">Growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What My Students Say</h2>
+        <div class="testimonial-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The React patterns workshop completely changed how I approach
+              component design. I'm now building more maintainable and reusable
+              components than ever before."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar"></div>
+              <div>
+                <div class="author-name">Alex Johnson</div>
+                <div class="author-title">Frontend Developer at TechCorp</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The personalized mentorship has been invaluable for my career
+              growth. I've gained confidence and landed a senior role after just
+              6 months of guidance."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar"></div>
+              <div>
+                <div class="author-name">Samantha Lee</div>
+                <div class="author-title">Senior UI Engineer</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The CSS architecture course solved our team's biggest pain
+              points. Our codebase is now more maintainable and our development
+              process much more efficient."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar"></div>
+              <div>
+                <div class="author-name">Michael Torres</div>
+                <div class="author-title">Tech Lead at StartupX</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container contact-container">
+        <h2 class="section-title">Get in Touch</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#work">Work</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link">T</a>
+          <a href="#" class="social-link">L</a>
+          <a href="#" class="social-link">G</a>
+          <a href="#" class="social-link">Y</a>
+        </div>
+
+        <p class="copyright">© 2025 TechMentor. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
