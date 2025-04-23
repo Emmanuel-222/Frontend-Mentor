@@ -3,8 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tech Mentor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <!-- Intialises EmailJS with this script using my public key -->
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "pRtB_qE2UM_MEw4sm",
+        });
+      })();
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -61,7 +73,10 @@
           <!-- Work Item 2 -->
           <div class="work-card">
             <div class="work-image">
-              <img src="./assests/CSS-removebg-preview.png" alt="Course image" />
+              <img
+                src="./assests/CSS-removebg-preview.png"
+                alt="Course image"
+              />
             </div>
             <div class="work-content">
               <h3 class="work-title">CSS Architecture for Scale</h3>
@@ -80,7 +95,10 @@
           <!-- Work Item 3 -->
           <div class="work-card">
             <div class="work-image">
-              <img src="./assests/Student_Give_Guidance-removebg-preview.png" alt="Mentoring image" />
+              <img
+                src="./assests/Student_Give_Guidance-removebg-preview.png"
+                alt="Mentoring image"
+              />
             </div>
             <div class="work-content">
               <h3 class="work-title">Frontend Career Mentorship Program</h3>
@@ -182,6 +200,28 @@
 
           <button type="submit">Send Message</button>
         </form>
+        <div id="successOverlay" class="success-overlay">
+          <div class="success-popup">
+            <div class="success-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you shortly.</p>
+            <button id="closeOverlay" class="close-button">Close</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -205,5 +245,6 @@
         <p class="copyright">© 2025 TechMentor. All rights reserved.</p>
       </div>
     </footer>
+    <script src="contact-form.js"></script>
   </body>
 </html>

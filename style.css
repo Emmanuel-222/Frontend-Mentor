@@ -369,3 +369,102 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Overlay spinner */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.success-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-popup {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    max-width: 90%;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.success-overlay.active .success-popup {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(16, 185, 129, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--success);
+}
+
+.success-popup h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.success-popup p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+.close-button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: var(--accent-hover);
+}
+
+@keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: loading 0.8s linear infinite;
+    position: absolute;
+    opacity: 0;
+}
+
+.button-loading .loading-spinner {
+    opacity: 1;
+}
