@@ -1,5 +1,15 @@
 const SendForm = (e) => {
     e.preventDefault();
+
+    const overlay = document.getElementById("successOverlay");
+    const spinnerContainer = document.querySelector(".spinner-container");
+    const spinner = document.querySelector(".spinner");
+
+    if(spinner && spinnerContainer) {
+      spinner.classList.add('active');
+      spinnerContainer.classList.add('active');
+    }
+
     const templateParams = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
@@ -9,7 +19,11 @@ const SendForm = (e) => {
   
     emailjs.send("service_kjr4ioq", "template_wheoytp", templateParams)
       .then((response) => {
-        const overlay = document.getElementById("successOverlay");
+
+        if(spinner && spinnerContainer) {
+          spinner.classList.remove('active');
+          spinnerContainer.classList.remove('active');
+        }
         overlay.classList.add("active");
   
         setTimeout(() => {
